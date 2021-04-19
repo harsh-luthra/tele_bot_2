@@ -1,0 +1,19 @@
+{
+  "name": "tele-bot12",
+  "version": "1.0.0",
+  "description": "manages Bot of Telegram 122",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "express": "^4.17.1",
+    "heroku-self-ping": "^2.0.1",
+    "node-telegram-bot-api": "^0.50.0",
+    "save": "^2.4.0",
+    "socket.io": "^2.3.0"
+  }
+}
