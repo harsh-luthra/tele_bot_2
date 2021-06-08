@@ -309,7 +309,6 @@ io.on('connection', function(socket) {
 	
 });
 
-/*
 bot.on('message', (msg) => {
 	//socket.emit('chat_id',msg.chat.id);
 
@@ -321,7 +320,7 @@ bot.on('message', (msg) => {
 	 //bot.sendMessage(my_chat_id,chat_id);
 	 
 });
-*/
+
 
 //7554
 // FORWARD Msg to Other Groups

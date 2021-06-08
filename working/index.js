@@ -19,7 +19,7 @@ var Msg_Array = new Array();
 
 var Groups_Array = new Array();
 
-	Groups_Array.push("-403822704@BU@name");
+	/*Groups_Array.push("-403822704@BU@name");
 	Groups_Array.push("-473706806@BU@name");
 	Groups_Array.push("-422666632@BU@name");
 	Groups_Array.push("-554445952@BU@name");
@@ -28,7 +28,7 @@ var Groups_Array = new Array();
 	Groups_Array.push("-482845738@BU@name");
 	Groups_Array.push("-573131030@BU@name");
 	Groups_Array.push("-564101641@BU@name");
-	Groups_Array.push("-548565185@BU@name");
+	Groups_Array.push("-548565185@BU@name");*/
 
 var Groups_len = 0;
 
@@ -49,11 +49,32 @@ http.listen(process.env.PORT || 8080, function () {
   console.log(`Listening on ${ PORT }`);
 });
 
+
 const TelegramBot = require('node-telegram-bot-api');
 
-const token_new = '1802161362:AAEt_cqp0fv6IET2KWoDylIRKUrAChrGflw';
+var Bots_array = new Array();
 
-const bot = new TelegramBot(token_new, {polling: true});
+const token_new_1 = '1802161362:AAEt_cqp0fv6IET2KWoDylIRKUrAChrGflw';
+const token_new_2 = '1802161362:AAEt_cqp0fv6IET2KWoDylIRKUrAChrGflw';
+const token_new_3 = '1802161362:AAEt_cqp0fv6IET2KWoDylIRKUrAChrGflw';
+const token_new_4 = '1802161362:AAEt_cqp0fv6IET2KWoDylIRKUrAChrGflw';
+const token_new_5 = '1802161362:AAEt_cqp0fv6IET2KWoDylIRKUrAChrGflw';
+
+const bot_1 = new TelegramBot(token_new_1, {polling: true});
+//const bot_2 = new TelegramBot(token_new_1, {polling: true});
+//const bot_3 = new TelegramBot(token_new_1, {polling: true});
+//const bot_4 = new TelegramBot(token_new_1, {polling: true});
+//const bot_5 = new TelegramBot(token_new_1, {polling: true});
+
+Bots_array.push(bot_1);
+//Bots_array.push(bot_2);
+//Bots_array.push(bot_3);
+//Bots_array.push(bot_4);
+//Bots_array.push(bot_5);
+
+var B = 0; // b for bots loop
+
+Bots_length = Bots_array.length;
 
 function repeat_now(){
 	console.log('Repeat Function');
@@ -118,7 +139,7 @@ function Send_img(Msg,Name,Link,img_link){
 	
 	function send_img_msg(element){
 	var b_split = element.split('@BU@');
-	bot.sendPhoto(b_split[0], photo_n,
+	Bots_array[B].sendPhoto(b_split[0], photo_n,
 	{"reply_markup":{"inline_keyboard":[
           [
             {
@@ -127,6 +148,12 @@ function Send_img(Msg,Name,Link,img_link){
             },
           ],
         ]}, caption: Msg});
+		
+		if(Bots_length-1 == B){
+			  B = 0;
+			}else{
+			 B++;
+			}
 	}	
 }
 
