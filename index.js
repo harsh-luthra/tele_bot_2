@@ -74,7 +74,7 @@ Bots_array.push(bot_5);
 
 var B = 0; // b for bots loop
 
-Bots_length = Bots_array.length();
+Bots_length = Bots_array.length;
 
 function repeat_now(){
 	console.log('Repeat Function');
