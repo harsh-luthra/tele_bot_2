@@ -309,7 +309,7 @@ io.on('connection', function(socket) {
 	
 });
 
-bot.on('message', (msg) => {
+bot_1.on('message', (msg) => {
 	//socket.emit('chat_id',msg.chat.id);
 
     //console.log('new msg: '+msg.text.toString());
