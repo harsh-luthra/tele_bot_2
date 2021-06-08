@@ -67,10 +67,10 @@ const bot_4 = new TelegramBot(token_new_1, {polling: true});
 const bot_5 = new TelegramBot(token_new_1, {polling: true});
 
 Bots_array.push(bot_1);
-Bots_array.push(bot_2);
-Bots_array.push(bot_3);
-Bots_array.push(bot_4);
-Bots_array.push(bot_5);
+//Bots_array.push(bot_2);
+//Bots_array.push(bot_3);
+//Bots_array.push(bot_4);
+//Bots_array.push(bot_5);
 
 var B = 0; // b for bots loop
 
