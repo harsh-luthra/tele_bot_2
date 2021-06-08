@@ -61,10 +61,10 @@ const token_new_4 = '1802161362:AAEt_cqp0fv6IET2KWoDylIRKUrAChrGflw';
 const token_new_5 = '1802161362:AAEt_cqp0fv6IET2KWoDylIRKUrAChrGflw';
 
 const bot_1 = new TelegramBot(token_new_1, {polling: true});
-const bot_2 = new TelegramBot(token_new_1, {polling: true});
-const bot_3 = new TelegramBot(token_new_1, {polling: true});
-const bot_4 = new TelegramBot(token_new_1, {polling: true});
-const bot_5 = new TelegramBot(token_new_1, {polling: true});
+//const bot_2 = new TelegramBot(token_new_1, {polling: true});
+//const bot_3 = new TelegramBot(token_new_1, {polling: true});
+//const bot_4 = new TelegramBot(token_new_1, {polling: true});
+//const bot_5 = new TelegramBot(token_new_1, {polling: true});
 
 Bots_array.push(bot_1);
 //Bots_array.push(bot_2);
