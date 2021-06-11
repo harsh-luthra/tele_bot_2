@@ -23,7 +23,7 @@ const PORT = 8080;
 
 var Status = false;
 
-var Repeat_secs = 4; //////////////
+var Repeat_secs = 2; //////////////
 
 var call_after_secs = 60; //////////////
 
