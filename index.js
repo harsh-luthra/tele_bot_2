@@ -187,7 +187,7 @@ function main_function(){
 							})();
 						
 						}	catch (err) {
-							error_check(err);
+								error_check(err);
 						  }
 						
 						if(Groups_len-1 == g){
