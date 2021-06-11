@@ -23,7 +23,7 @@ const PORT = 8080;
 
 var Status = false;
 
-var Repeat_secs = 4; //////////////
+var Repeat_secs = 5; //////////////
 
 var call_after_secs = 60; //////////////
 
@@ -220,8 +220,8 @@ function main_function(){
 }
 
 function error_check(err){
-		console.log(err);
-	if(err.includes('A wait of')){
+		console.log(err.message);
+	if(err.message.includes('A wait of')){
 		console.log('Contains');
 	}
 }
