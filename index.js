@@ -152,7 +152,7 @@ function main_function(){
 				}*/
 					
 					
-					//Status = true;
+					Status = true;
 					
 				myVar = setInterval(function(){ timer() }, Repeat_secs*1000);
 				
@@ -171,18 +171,24 @@ function main_function(){
 							
 							console.log(group_now);
 						
-							(async function run() {
-							//await sleep(10*1000);
-							const result = await client.invoke(new Api.messages.ForwardMessages({
-							fromPeer: from_group,
-							id: [msg_],
-							randomId: [BigInt(Math.floor(Math.random() * -10000000000000).toString())],
-							toPeer: group_now,
-							withMyScore: true,
-							scheduleDate: 43
-						}));
-							//console.log(result); // prints the result
-						})();
+						try {
+						
+								(async function run() {
+								//await sleep(10*1000);
+								const result = await client.invoke(new Api.messages.ForwardMessages({
+								fromPeer: from_group,
+								id: [msg_],
+								randomId: [BigInt(Math.floor(Math.random() * -10000000000000).toString())],
+								toPeer: group_now,
+								withMyScore: true,
+								scheduleDate: 43
+							}));
+								//console.log(result); // prints the result
+							})();
+						
+						}	catch (err) {
+							error_check(err);
+						  }
 						
 						if(Groups_len-1 == g){
 						  g = 0;
@@ -202,17 +208,22 @@ function main_function(){
 						}
 						
 						//console.log('Sending Msg');
-					//do stuff here
+						//do stuff here
 					}
 
 					function stopFunction() {
 					clearInterval(myVar);
 				}
 				
-				
-
 	})()
 
+}
+
+function error_check(err){
+		console.log(err);
+	if(err.includes('A wait of')){
+		console.log('Contains');
+	}
 }
 
 
